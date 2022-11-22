@@ -3,6 +3,7 @@ import {
   CheckOutlined, DollarCircleOutlined, ExclamationCircleOutlined, FundOutlined, MoneyCollectOutlined, NumberOutlined, StopOutlined, ThunderboltOutlined, TrophyOutlined,
 } from '@ant-design/icons';
 import {
+  Button,
   Col, Row, Select, Typography,
 } from 'antd';
 import HTMLReactParser from 'html-react-parser';
@@ -11,6 +12,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
 import LineChart from './LineChart';
+import Loader from './Loader';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -22,7 +24,7 @@ const CryptoDetails = () => {
   const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod });
   const cryptoDetails = data?.data?.coin;
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 
@@ -44,6 +46,8 @@ const CryptoDetails = () => {
 
   return (
     <Col className="coin-detail-container">
+      {/* Ant Design Back button */}
+      <Button className="btn-back" type="primary" href="/cryptocurrencies">Back</Button>
       <Col className="coin-heading-container">
         <Title level={2} className="coin-name">
           {cryptoDetails?.name}

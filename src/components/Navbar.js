@@ -1,5 +1,5 @@
 import {
-  BulbOutlined, FundOutlined, HomeOutlined, MenuOutlined, MoneyCollectOutlined,
+  BulbOutlined, FundOutlined, HomeOutlined, MenuOutlined,
 } from '@ant-design/icons';
 import {
   Avatar, Button, Menu, Typography,
@@ -48,9 +48,6 @@ const Navbar = () => {
         </Menu.Item>
         <Menu.Item icon={<FundOutlined />}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-        </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
-          <Link to="/exchanges">Exchanges</Link>
         </Menu.Item>
         <Menu.Item icon={<BulbOutlined />}>
           <Link to="/news">News</Link>
