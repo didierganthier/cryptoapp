@@ -122,9 +122,13 @@ After you're finished please remove all the comments and instructions!
 In order to run this project you need:
 
 1- Get the Coin API key from [CoinRanking API](https://rapidapi.com/Coinranking/api/coinranking1).
+
 2- Get the News API key from [Bing News Search API](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/).
+
 3- Clone the project
+
 4- Install the dependencies
+
 4- Create a `.env` file in the root directory and add the following:
 
 ```
@@ -217,7 +221,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Original design idea by Nelson Sakwa on Behance.
+> Original design idea by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) on Behance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
